@@ -28,47 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // welcomeLabel
             // 
-            this.button1.Location = new System.Drawing.Point(141, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.welcomeLabel.Font = new System.Drawing.Font("Prestige Elite Std", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(122, 45);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(350, 31);
+            this.welcomeLabel.TabIndex = 0;
+            this.welcomeLabel.Text = "Welcome to Code Basic";
             // 
-            // button2
+            // startButton
             // 
-            this.button2.Location = new System.Drawing.Point(141, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.startButton.BackColor = System.Drawing.Color.Transparent;
+            this.startButton.Font = new System.Drawing.Font("Letter Gothic Std", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.Location = new System.Drawing.Point(136, 133);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(323, 136);
+            this.startButton.TabIndex = 1;
+            this.startButton.Text = "Press Here to Begin";
+            this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 477);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(594, 324);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.welcomeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "WelcomeForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Code Basic";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Button startButton;
+
     }
 }
 
